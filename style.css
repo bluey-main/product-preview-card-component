@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root{
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Very_dark_cyan: hsl(158, 43%, 23%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue:  hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Cream);
+    overflow: hidden;
+
+}
+
+.content-container{
+    width: 600px;
+    height: 500px;
+    /* background-color: aqua; */
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-container .image-container{
+    width:50% ;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: url(./images/image-product-desktop.jpg);
+    background-position:center;
+    background-size: cover;
+    transition: ease-in-out 0.5s;
+}
+
+.content-container .text-container{
+    width: 50%;
+    height: 100%;
+    background-color: var(--White);
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px ;
+    transition: ease-in-out 0.5s;
+
+}
+
+p.intro-text{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--Dark_grayish_blue);
+}
+
+h1.head-text{
+    font-size: 38px;
+    font-weight: bolder;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    color: var(--Very_dark_blue);
+}
+
+p.body-text{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: var(--Dark_grayish_blue);
+}
+
+h1.head-price{
+    font-family: 'Fraunces', serif;
+    color: var(--Dark_cyan);
+}
+
+p.old-price{
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark_grayish_blue);
+
+}
+.text-container .price-text{
+    width: 100%;
+    height: 50px;
+    /* background-color: hotpink; */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.text-container .cart-button{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: var(--Dark_cyan);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: ease-in-out 0.5s ;
+}
+
+.cart-button:hover{
+    cursor: pointer;
+    background-color: var(--Very_dark_cyan);
+}
+p.cart-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--White);
+
+}
+
+.cart-button svg{
+    transform: scale(1.3);
+}
+
+@media (max-width:850px ){
+    .content-container{
+        width: 400px;
+        height: 800px;
+        /* background-color: aqua; */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        overflow:hidden;
+    }
+
+    .content-container .image-container{
+        width:100% ;
+        height: 40%;
+        /* background-color: brown; */
+        background-image: url(./images/image-product-mobile.jpg);
+        background-position:center;
+        background-size: cover;
+    }
+
+    .content-container .text-container{
+        width: 90%;
+        height: 60%;
+        background-color: var(--White);
+        position: relative;
+        padding-right: 25px;
+        padding-left: 25px ;
+    
+    }
+
+    p.body-text{
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.5;
+        color: var(--Dark_grayish_blue);
+    }
+
+    .text-container .cart-button{
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        background-color: var(--Dark_cyan);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        transition: ease-in-out 0.5s ;
+    }
+}
